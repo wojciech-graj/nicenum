@@ -1,0 +1,19 @@
+[package]
+name = "nicenum"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85.0"
+description = "Nice Numbers for Graph Labels by Paul S. Heckbert from Graphics Gems, Academic Press, 1990"
+documentation = "https://docs.rs/nicenum"
+repository = "https://github.com/wojciech-graj/nicenum"
+license = "MIT"
+keywords = ["graph", "graphics", "loose_label"]
+categories = ["algorithms", "mathematics", "no-std::no-alloc", "value-formatting", "visualization"]
+
+[dependencies]
+libm = { version = "0.2", optional = true }
+
+[features]
+default = ["std"]
+libm = ["dep:libm"]
+std = []
